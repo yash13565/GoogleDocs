@@ -178,10 +178,6 @@ function Navbar({handleremoveFormat,printDiv}) {
 </div>
       </span>
 
-      {/* <span className={style.container1}>
-   
-      </span> */}
-
       <span className={style.container1}>
         {textalign.map((element) => (
           <p onClick={() => handleAlignment(element)}>{element.icon}</p>
@@ -203,12 +199,7 @@ function Navbar({handleremoveFormat,printDiv}) {
               </select>
             </div>
       </span>
-      {/* <span className={style.container1}>
-       
-      </span> */}
-      {/* <span className={style.container1}>
- 
-      </span> */}
+      
     </div>
   );
 }
