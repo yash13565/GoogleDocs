@@ -13,19 +13,10 @@ const printDiv = useRef("");
   function handleremoveFormat(color) {
     document.execCommand("removeFormat");
   }
-    async function downloadFile() {
-      const sheetContent = document.getElementById('edit');
-      const canvas = await html2canvas(sheetContent, { dpi: 300 });
-      const imageData = canvas.toDataURL("image/png", 1.0);
-      const pdfDoc = new jsPDF({
-        orientation: "portrait",
-        unit: "mm",
-        format: "a4",
-        compress: false,
-      });
-      pdfDoc.addImage(imageData, "PNG", 0, 30, 210, 297, "", "FAST");
-      pdfDoc.save(`${value}.pdf`);
-    }
+  function download(){
+    window.print()
+  }
+
   return (
     <div className={style.main}>
       <Navbar1 
@@ -34,14 +25,12 @@ const printDiv = useRef("");
       />
       <Navbar
         handleremoveFormat={handleremoveFormat}
-        downloadFile={downloadFile}
-        printDiv={printDiv}
       />
-      <div id="edit" className={style.box} ref={printDiv}>
+      <div id="edit" className={style.box} >
         <p  className={style.txt} contentEditable={true}
         ></p>
       </div>
-    <button onClick={ downloadFile}  className={style.floaticon}><DownloadIcon style={{fontSize:"35px",color:"white"}}/></button>
+    <button onClick={download} className={style.floaticon}><DownloadIcon style={{fontSize:"35px",color:"white"}}/></button>
     </div>
   );
 }
