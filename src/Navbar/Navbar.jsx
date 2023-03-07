@@ -90,7 +90,6 @@ function Navbar({handleremoveFormat,printDiv}) {
   return (
     <div className={style.main}>
       <span className={style.container1}>
-
       <select
           style={{width:"100%"}}
             className={style.fontStyle}
@@ -154,7 +153,7 @@ function Navbar({handleremoveFormat,printDiv}) {
         <div>
           <AddPhotoAlternateIcon
           onClick={handleImageOpen}
-            style={{ fontSize: "20", marginLeft: "7px",marginTop:'-0.5rem',fontWeight:'lighter' }}
+            style={{ fontSize: "20", marginLeft: "7px",fontWeight:'lighter' }}
           />
           <input 
           onChange={captureImage}

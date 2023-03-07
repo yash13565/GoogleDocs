@@ -13,8 +13,6 @@ const printDiv = useRef("");
   function handleremoveFormat(color) {
     document.execCommand("removeFormat");
   }
-
-
     async function downloadFile() {
       const sheetContent = document.getElementById('edit');
       const canvas = await html2canvas(sheetContent, { dpi: 300 });
@@ -28,9 +26,6 @@ const printDiv = useRef("");
       pdfDoc.addImage(imageData, "PNG", 0, 30, 210, 297, "", "FAST");
       pdfDoc.save(`${value}.pdf`);
     }
-  
-  
-
   return (
     <div className={style.main}>
       <Navbar1 
@@ -42,12 +37,9 @@ const printDiv = useRef("");
         downloadFile={downloadFile}
         printDiv={printDiv}
       />
-
-      <div className={style.box} ref={printDiv}>
-        <p  id="edit" className={style.txt} contentEditable={true}
-      
+      <div id="edit" className={style.box} ref={printDiv}>
+        <p  className={style.txt} contentEditable={true}
         ></p>
-    
       </div>
     <button onClick={ downloadFile}  className={style.floaticon}><DownloadIcon style={{fontSize:"35px",color:"white"}}/></button>
     </div>
