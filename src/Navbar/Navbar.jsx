@@ -139,7 +139,6 @@ function Navbar({handleremoveFormat,printDiv}) {
 
       <span className={style.container1}>
         <div className={style.fontsizecontainer}>
-
               <div className={style.fontlist}>
               <select onChange={(e) => handleemoji(e)}>
                 <option>emojis</option>
@@ -176,13 +175,11 @@ function Navbar({handleremoveFormat,printDiv}) {
 
 </div>
       </span>
-
       <span className={style.container1}>
         {textalign.map((element) => (
           <p onClick={() => handleAlignment(element)}>{element.icon}</p>
         ))}
       </span>
-    
       <span className={style.container1}>
         <p>Normal</p>
         <UnfoldMoreIcon onClick={handleremoveFormat} />
