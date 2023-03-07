@@ -27,28 +27,7 @@ function Navbar1({setValue,value}) {
           <StarBorderIcon  style={{ fontSize: "17" }}/>
           <ForwardToInboxIcon style={{ fontSize: "17" }}/>
           < CloudOffIcon style={{ fontSize: "17" }}/>
-
           </h3>
-        
-          <span className={style.filename}>
-            <p>File</p>
-            <p>Edit</p>
-            <p>View</p>
-            <p>Insert</p>
-            <p>Format</p>
-            <p>Tools</p>
-            <p>Extensions</p>
-            <p>Help</p>
-          </span>
-        </div>
-
-        <div className={style.innercontainer2}>
-          <CommentIcon style={{ fontSize: "26", color: "gray" }} />
-          <div className={style.share}>
-            <p>
-              <LockIcon style={{ fontSize: "15px" }} /> Share
-            </p>
-          </div>
         </div>
       </div>
     </>
