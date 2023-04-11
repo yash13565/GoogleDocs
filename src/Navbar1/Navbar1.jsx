@@ -1,7 +1,5 @@
-import React,{useState} from "react";
+import React from "react";
 import DescriptionIcon from "@mui/icons-material/Description";
-import CommentIcon from "@mui/icons-material/Comment";
-import LockIcon from "@mui/icons-material/Lock";
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
 import CloudOffIcon from '@mui/icons-material/CloudOff';
@@ -29,6 +27,8 @@ function Navbar1({setValue,value}) {
           < CloudOffIcon style={{ fontSize: "17" }}/>
           </h3>
         </div>
+
+       
       </div>
     </>
   );

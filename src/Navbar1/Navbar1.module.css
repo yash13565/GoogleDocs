@@ -55,6 +55,7 @@
     border: none;
     outline: none;
     font-size: 19px;
+
 }
 @media print{
     .main{
